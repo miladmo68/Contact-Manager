@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": " Milad Moh",
+      "email": "milad@example.com",
+      "uaerID": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": " Milad Moh",
+      "email": "milad@example.com",
+      "password": "123456"
+    }
+  ]
+}
