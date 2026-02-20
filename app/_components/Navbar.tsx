@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import LogoutButton from "./LogoutButton";
 
 function Navbar() {
   const session = true;
@@ -14,13 +15,24 @@ function Navbar() {
             <>
               <Link
                 href="/contacts"
-                className="text-gray-600 hover:text-gray-800 mr-8"
+                className=" hover:text-blue-600 mr-8 transition-colors duration-200"
               >
                 Contacts
               </Link>
+              <LogoutButton />
             </>
           ) : (
-            <></>
+            <>
+              <Link href="/login" className="text-gray-600 hover:text-blue-800">
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="text-gray-600 hover:text-gray-800"
+              >
+                Register
+              </Link>
+            </>
           )}
         </div>
       </div>
