@@ -5,11 +5,14 @@ import { FiTrash2 } from "react-icons/fi";
 
 type DeleteButtonProps = {
   contact?: ContactType;
-  action: (prevState: any, formData: FormData) => Promise<any>;
+  action: (
+    prevState: { success?: boolean; error?: string } | null,
+    formData: FormData,
+  ) => Promise<{ success?: boolean; error?: string }>;
 };
 
 const DeleteButton = ({ contact, action }: DeleteButtonProps) => {
-  const [state, formAction] = useActionState(action);
+  const [, formAction] = useActionState(action, null);
   return (
     <form action={formAction}>
       <input type="hidden" name="id" value={contact?.id} />

@@ -7,21 +7,23 @@ import { deleteContactAction } from "../actions/Contact";
 
 const ContactList = ({ contacts }: { contacts: ContactType[] }) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {contacts.map((contact) => (
-        <div key={contact.id} className="border p-4 rounded-lg">
+        <div
+          key={contact.id}
+          className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-slate-300 hover:bg-white"
+        >
           <div className="flex items-start justify-between">
             <div>
-              <h2 className="text-lg font-semibold">{contact.name}</h2>
-              <p>{contact.email}</p>
+              <h2 className="text-lg font-semibold text-slate-900">
+                {contact.name || "Unnamed contact"}
+              </h2>
+              <p className="text-sm text-slate-600">{contact.email || "-"}</p>
             </div>
-            <div className=" flex items-center self-center gap-3">
+            <div className="flex items-center self-center gap-2">
               <Link
                 href={`/contact/edit/${contact.id}`}
-                className="flex items-center gap-1 p-2 rounded-md bg-blue-50 text-blue-600 
-             hover:bg-blue-600 hover:text-white 
-             transition-all duration-200 ease-in-out
-             shadow-sm hover:shadow-md"
+                className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 transition hover:bg-blue-600 hover:text-white"
               >
                 <FiEdit size={18} />
                 <span>Edit</span>

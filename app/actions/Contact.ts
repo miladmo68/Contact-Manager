@@ -5,7 +5,7 @@ import { getSession } from "../_lib/session";
 import { ContactType } from "../_types/contact";
 
 export const CreateContactAction = async (
-  prevState: any,
+  _prevState: unknown,
   formData: FormData,
 ) => {
   if (!formData.get("name")) {
@@ -29,7 +29,7 @@ export const CreateContactAction = async (
 };
 
 export const UpdateContactAction = async (
-  prevState: any,
+  _prevState: unknown,
   formData: FormData,
 ) => {
   const id = formData.get("id") as string;
@@ -51,7 +51,7 @@ export const UpdateContactAction = async (
 };
 
 export const deleteContactAction = async (
-  prevState: any,
+  _prevState: unknown,
   formData: FormData,
 ) => {
   const id = formData.get("id") as string;
