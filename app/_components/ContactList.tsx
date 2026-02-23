@@ -3,6 +3,7 @@ import { ContactType } from "../_types/contact";
 import Link from "next/link";
 import { FiEdit } from "react-icons/fi";
 import DeleteButton from "./DeleteButton";
+import { deleteContactAction } from "../actions/Contact";
 
 const ContactList = ({ contacts }: { contacts: ContactType[] }) => {
   return (
@@ -25,7 +26,7 @@ const ContactList = ({ contacts }: { contacts: ContactType[] }) => {
                 <FiEdit size={18} />
                 <span>Edit</span>
               </Link>
-              <DeleteButton action="deleteContactAction" contact={contact} />
+              <DeleteButton action={deleteContactAction} contact={contact} />
             </div>
           </div>
         </div>
