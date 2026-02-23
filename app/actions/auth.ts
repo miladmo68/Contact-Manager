@@ -32,6 +32,40 @@ export const loginAction = async (formData: FormData) => {
   redirect("/contact");
 };
 
+export const registerAction = async (formData: FormData) => {
+  const name = String(formData.get("name") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
+  const password = String(formData.get("password") ?? "").trim();
+
+  if (!name || !email || !password) {
+    redirect("/register");
+  }
+
+  try {
+    const existingResponse = await axios.get(
+      `${API_URL}/users?email=${encodeURIComponent(email)}`,
+    );
+    if (existingResponse.data.length > 0) {
+      redirect("/register");
+    }
+
+    const createResponse = await axios.post(`${API_URL}/users`, {
+      id: crypto.randomUUID(),
+      name,
+      email,
+      password,
+    });
+    const user = createResponse.data as UserType & { password: string };
+
+    await setSession({ id: user.id, email: user.email, name: user.name });
+  } catch (error) {
+    console.error("Register error:", error);
+    redirect("/register");
+  }
+
+  redirect("/contact");
+};
+
 export const LogoutAction = async () => {
   await deleteSession();
   redirect("/login");
