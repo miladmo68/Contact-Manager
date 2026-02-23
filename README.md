@@ -16,7 +16,6 @@
 
 `🔗` **Live URL:** (https://contact-manager-coral-one.vercel.app/)
 
-`📝` Replace the URL above with your deployed app (Vercel/Render/etc.).
 
 ## What This Project Does
 
