@@ -17,7 +17,7 @@ const ContactList = ({ contacts }: { contacts: ContactType[] }) => {
             </div>
             <div className=" flex items-center self-center gap-3">
               <Link
-                href={`/contact/${contact.id}/edit`}
+                href={`/contact/edit/${contact.id}`}
                 className="flex items-center gap-1 p-2 rounded-md bg-blue-50 text-blue-600 
              hover:bg-blue-600 hover:text-white 
              transition-all duration-200 ease-in-out
