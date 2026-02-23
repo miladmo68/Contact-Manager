@@ -1,16 +1,13 @@
 import ContactForm from "@/app/_components/ContactForm";
 import { UpdateContactAction } from "@/app/actions/Contact";
 import { getContactById } from "@/app/api/contact";
-import React from "react";
+import React, { use } from "react";
 
-async function EditContactPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
+function EditContactPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
 
-  const contact = await getContactById(id);
+  const contact = use(getContactById(id));
+  console.log("Contact data:", contact);
   return (
     <div className="p-6 max-w-md bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold mb-6">Edit Contact</h1>

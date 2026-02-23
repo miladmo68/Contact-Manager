@@ -5,6 +5,18 @@
       "name": "John",
       "email": "john@example.com",
       "userId": "1"
+    },
+    {
+      "id": "d4d5",
+      "name": "Milad ",
+      "email": "milad@gmail.com",
+      "userId": "1"
+    },
+    {
+      "id": "289e",
+      "name": "Test1",
+      "email": "test1@gmail.com",
+      "userId": "2"
     }
   ],
   "users": [
@@ -12,6 +24,12 @@
       "id": "1",
       "name": " user1",
       "email": "user1@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": " user2",
+      "email": "user2@example.com",
       "password": "123456"
     }
   ]
