@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-`🔗` **Live URL:** https://your-live-demo-url.com
+`🔗` **Live URL:** [https://your-live-demo-url.com](https://contact-manager-coral-one.vercel.app/)
 
 `📝` Replace the URL above with your deployed app (Vercel/Render/etc.).
 
