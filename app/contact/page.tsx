@@ -1,6 +1,7 @@
 import React from "react";
 import { getContacts } from "../api/contact";
 import { getSession } from "../_lib/session";
+import ContactList from "../_components/ContactList";
 
 export default async function ContactPage() {
   const user = await getSession();
@@ -28,5 +29,18 @@ export default async function ContactPage() {
     );
   }
 
-  return <div>Contact Page</div>;
+  return (
+    <div className="flex flex-col mb-6">
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold">Your Contacts</h1>
+        <a
+          href="/contact/new"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Add Contact
+        </a>
+      </div>
+      <ContactList contacts={contacts} />
+    </div>
+  );
 }
