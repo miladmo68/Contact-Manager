@@ -1,112 +1,73 @@
-# Contact Manager
+<div align="center">
+
+# 📇 Contact Manager
+
+A contact management app built with the Next.js App Router, server actions and cookie-based authentication.
+
+<a href="https://contact-manager-coral-one.vercel.app/"><img src="https://img.shields.io/badge/Live_Demo-Open_Site-FF6A00?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"></a>
+<a href="https://github.com/miladmo68/Contact-Manager"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source code"></a>
+<a href="https://miladweb.com"><img src="https://img.shields.io/badge/Portfolio-miladweb.com-1E3A8A?style=for-the-badge&logo=aboutdotme&logoColor=white" alt="Portfolio"></a>
+
+**🔗 Live:** [contact-manager-coral-one.vercel.app](https://contact-manager-coral-one.vercel.app/)
+
+</div>
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" />
-  <img alt="React" src="https://img.shields.io/badge/React-19-149ECA?style=for-the-badge&logo=react&logoColor=white" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img alt="JSON Server" src="https://img.shields.io/badge/JSON--Server-API-FC427B?style=for-the-badge" />
+  <img src="./.github/preview.jpg" alt="Contact Manager screenshot" width="100%" />
 </p>
 
-<p align="center">
-  A modern contact manager built with Next.js App Router, server actions, and cookie-based auth.
-</p>
+## ✨ Features
 
-## Live Demo
+- Register, log in and log out
+- Create, edit and delete contacts
+- Server actions with cookie-based sessions
+- TypeScript and Tailwind CSS
 
-`🔗` **Live URL:** (https://contact-manager-coral-one.vercel.app/)
+## 🛠️ Tech Stack
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) ![JSON Server](https://img.shields.io/badge/JSON%20Server-000000?style=for-the-badge&logo=json&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## What This Project Does
+## 🚀 Getting Started
 
-- `🔐` Login with email/password (mocked via JSON Server).
-- `🍪` Creates and clears an HTTP-only session cookie.
-- `📇` Shows only the logged-in user's contacts.
-- `➕` Create a new contact.
-- `✏️` Edit an existing contact.
-- `🗑️` Delete a contact with confirmation.
-- `⚡` Revalidates contact list after create/update/delete.
+**Prerequisites:** [Node.js](https://nodejs.org/) 18 or newer
 
-## Tech Stack
-
-- `Next.js 16` (App Router + Server Actions)
-- `React 19`
-- `TypeScript`
-- `Tailwind CSS v4`
-- `Axios`
-- `JSON Server` (mock backend)
-
-## Project Structure
-
-```text
-app/
-  actions/          # Server actions (auth + contacts)
-  api/              # Axios API wrappers
-  contact/          # Contact routes (list, new, edit)
-  _components/      # UI components
-  _lib/             # Session helpers
-  _types/           # Shared TypeScript types
-  _data/db.json     # Mock database
-```
-
-## Routes
-
-- `/` Home page
-- `/login` Login page
-- `/contact` Contact list
-- `/contact/new` Create contact
-- `/contact/edit/[id]` Edit contact
-
-## Local Setup
-
-1. Install dependencies:
+**Install and run**
 
 ```bash
+git clone https://github.com/miladmo68/Contact-Manager.git
+cd Contact-Manager
 npm install
+npm run server   # starts the mock API (json-server)
+npm run dev      # in a second terminal
 ```
 
-2. Start mock API server:
+### Environment variables
 
-```bash
-npm run server
-```
-
-3. Start Next.js app:
-
-```bash
-npm run dev
-```
-
-4. Open:
-
-```text
-http://localhost:3000
-```
-
-## Demo Credentials
-
-- Email: `user1@example.com`
-- Password: `123456`
-
-## Available Scripts
-
-- `npm run dev` Start development server
-- `npm run build` Build for production
-- `npm run start` Run production build
-- `npm run lint` Run ESLint
-- `npm run server` Run JSON Server on port `3001`
-
-## API Base URL
-
-- Default: `http://localhost:3001`
-- Optional env:
+Create a `.env` file (or `.env.local` for Next.js) with:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=
 ```
 
-## Quality Status
+## 📁 Project Structure
 
-- `✅` TypeScript build passes
-- `✅` ESLint passes
-- `✅` Core auth/contact flows wired and working
+```
+Contact-Manager/
+├── app/
+├── public/
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+└── tsconfig.json
+```
+
+## 👤 Author
+
+**Milad Mohammadi** — Frontend-Focused Full-Stack Developer, Toronto 🇨🇦
+
+[![Website](https://img.shields.io/badge/Website-miladweb.com-FF6A00?style=flat-square&logo=googlechrome&logoColor=white)](https://miladweb.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-miladmo68-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miladmo68/)
+[![GitHub](https://img.shields.io/badge/GitHub-miladmo68-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/miladmo68)
+
+<p align="center"><sub>If you like this project, consider giving it a ⭐</sub></p>
